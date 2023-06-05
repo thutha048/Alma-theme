@@ -1,0 +1,32 @@
+{
+    "sections": {
+      "feedback": {
+        "type": "alma-feedback",
+        "settings": {
+        }
+      },
+      "article": {
+        "type": "alma-article",
+        "settings": {
+        }
+      },
+      "benefit": {
+        "type": "alma-benefit",
+        "settings": {
+        }
+      },
+      "instagram-product": {
+        "type": "alma-instagram-product",
+        "settings": {
+  
+        }
+      }
+    },
+    "order": [
+      "feedback",
+      "article",
+     "benefit",
+      "instagram-product"
+    ]
+  }
+  

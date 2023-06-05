@@ -1,0 +1,41 @@
+//both css js
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const glob = require('glob-all');
+module.exports = {
+  entry: {
+    styles2: glob.sync('./src/**/*.css'),
+    scripts: glob.sync('./src/**/*.js')
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+  },
+    devtool: 'inline-source-map',
+    mode: 'production',
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'], // Cấu hình loaders cho JS nếu cần thiết
+      }
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].min.css', // Tên tệp tin sau khi minify (tương ứng với tên của entry)
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
+  },
+};

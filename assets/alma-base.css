@@ -1,0 +1,52 @@
+:root{
+    --black-color: #000000;
+    --background-color: #fff;
+    --sub-background-color: #FEFAF2;
+    --icon-color: #f5e7c4; 
+    --gray-color: #CDCDCD;
+}
+/* component-grid */
+  
+.alma-page-width {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1.25rem; 
+    /* 20px */
+}
+
+.alma-grid{
+    width: 1616px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* .grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    /* column-gap: var(--grid-mobile-horizontal-spacing); */
+    /* row-gap: var(--grid-mobile-vertical-spacing); */
+  /* }  */
+
+.grid__row{
+    display: flex; /*nawmf ngang*/
+    flex-wrap: wrap;
+}
+
+.grid__col-4{
+    width: 25%;
+}
+
+.grid__col-6{
+    width: 16.6667%;
+    margin: 1.25rem;
+}
+
+.grid__col-2{
+    width: 50%;
+}
+
+.grid__col-3{
+    width: 33.33%;
+}

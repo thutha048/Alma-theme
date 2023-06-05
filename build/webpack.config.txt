@@ -1,0 +1,120 @@
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const { CleanCWebpackPlugin } = require('clean-webpack-plugin');
+// const glob = require('glob-all');
+// const MergeIntoSingleFilePlugin = require('webpack-merge-and-include-globally');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const { CleanCSSPlugin } = require('clean-css-webpack-plugin');
+module.exports = {
+  // entry:{
+  // styles: glob.sync('./src/*.css'),
+  // },
+  // entry: {
+  //   styles: './src/**/*.css'
+  // },
+  // entry: glob.sync('./src/**/*.css'),
+  entry: {
+    stylebase:[
+
+      './src/base.css',
+      './src/collage.css'
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      minify: {
+                  collapseWhitespace: false,
+        	          preserveLineBreaks: true
+        	      }, 
+        
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'stylebase.min.css'
+    }),
+    // new MergeIntoSingleFilePlugin({
+    //   files: {
+    //     'styles.min.css': [
+    //       path.resolve(__dirname, 'src/**/*.css')
+    //     ]
+    //   },
+    //   transform: {
+    //     'styles.min.css': code => code // Để giữ nguyên nội dung của file CSS
+    //   }
+    // })
+  ],
+  output: {
+    filename: 'stylebase.min.css',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'inline-source-map',
+  mode: 'production',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:[MiniCssExtractPlugin.loader, 'css-loader']
+      }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  }
+
+};
+
+    // new CleanWebpackPlugin(),
+
+  // entry:{
+  //     newfile: [
+  //       './src/animations.js',
+  //      './src/cart-drawer.js'
+  //     ]
+  // },
+
+// const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+// module.exports = {
+//   optimization: {
+//     minimizer: [new OptimizeCSSAssetsPlugin({})],
+//   },
+//   entry: {
+//     newfile: [
+//       './src/animations.js'
+//     ]
+//   },
+//   plugins: [
+//     new CleanWebpackPlugin(),
+//     new HtmlWebpackPlugin({
+//       title: 'Output Management'
+//     }),
+//     new MiniCssExtractPlugin({
+//       filename: 'style.min.css'
+//     })
+//   ],
+//   output: {
+//     filename: '[name].js',
+//     path: path.resolve(__dirname, 'dist')
+//   },
+//   module: {
+//     rules: [
+//       {
+//         test: /\.css$/,
+//         use: [
+//           MiniCssExtractPlugin.loader,
+//           /*'style-loader',*/
+//           'css-loader'
+//         ]
+//       }
+//     ]
+//   }
+// };

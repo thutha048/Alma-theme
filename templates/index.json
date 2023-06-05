@@ -136,7 +136,7 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=9wW9E6TNoVA",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
         "description": "",
         "full_width": false,
@@ -192,10 +192,31 @@
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false,
-        "h_scheme": "background-1",
+        "color_scheme": "background-1",
         "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "feedback": {
+      "type": "alma-feedback",
+      "settings": {
+      }
+    },
+    "article": {
+      "type": "alma-article",
+      "settings": {
+      }
+    },
+    "benefit": {
+      "type": "alma-benefit",
+      "settings": {
+      }
+    },
+    "instagram-product": {
+      "type": "alma-instagram-product",
+      "settings": {
+
       }
     }
   },
@@ -205,6 +226,10 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "feedback",
+    "article",
+    "benefit",
+    "instagram-product"
   ]
 }

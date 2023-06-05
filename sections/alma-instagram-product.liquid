@@ -1,0 +1,53 @@
+{{ 'alma-instagram-product.css' | asset_url | stylesheet_tag }}
+
+
+<div class="instagram-product-container ">
+  <div class="instagram-product__header">
+    <p class="instagram-product__title">We are on instagram! Come and join the party</p>
+  </div>
+
+  <div class="instagram-product__list">
+    <div class="alma-grid">
+      <div class="grid__row">
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup4.png" alt="">
+          </a>
+        </div>
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup3.png" alt="">
+          </a>
+        </div>
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup8.png" alt="">
+          </a>
+        </div>
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup12.png" alt="">
+          </a>
+        </div>
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup10.png" alt="">
+          </a>
+        </div>
+        <div class="instagram-product__item grid__col-6">
+          <a href="#" class="instagram-product__item-img">
+            <img src="../assets/mockup14.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "instagram-product",
+    "settings": []
+  }
+{% endschema %}

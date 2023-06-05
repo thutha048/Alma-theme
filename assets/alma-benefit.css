@@ -1,0 +1,23 @@
+.benefit__container {
+    color: #000;
+    font-size: 1.4rem;
+    /* border-top: 2px solid var(--black-color); */
+    padding: 5.6rem;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    background-color: var(--sub-background-color);
+}
+
+.benefit__block{
+    margin: 2.5rem 1rem;
+    text-align: center;
+    width: 30%;
+}
+.benefit__block--title{
+    margin: 0;
+}
+.benefit__block--detail{
+    margin: 0;
+}
