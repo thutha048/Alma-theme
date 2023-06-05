@@ -197,27 +197,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "feedback": {
-      "type": "alma-feedback",
-      "settings": {
-      }
-    },
-    "article": {
-      "type": "alma-article",
-      "settings": {
-      }
-    },
-    "benefit": {
-      "type": "alma-benefit",
-      "settings": {
-      }
-    },
-    "instagram-product": {
-      "type": "alma-instagram-product",
-      "settings": {
-
-      }
     }
   },
   "order": [
@@ -226,10 +205,6 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "feedback",
-    "article",
-    "benefit",
-    "instagram-product"
+    "multicolumn"
   ]
 }
